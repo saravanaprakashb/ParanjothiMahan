@@ -9,7 +9,8 @@ namespace ParanjothiMahan
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery.min.js",
+                        "~/Scripts/jquery.scrollex.min.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
@@ -20,9 +21,16 @@ namespace ParanjothiMahan
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/Site").Include(
+                        "~/Scripts/skel.min.js",
+                        "~/Scripts/util.js",
+                        "~/Scripts/main.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/main.css",
+                      "~/Content/font-awesome.min.css"));
         }
     }
 }
